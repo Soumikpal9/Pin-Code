@@ -4,7 +4,7 @@ import java.util.regex.*;
 
 public class PinCode {
 	public static void PincodeValidator(String input) {
-		String regex = "^[^A-Z](?<![0-9])[0-9]{6}(?![0-9])";
+		String regex = "^(?<![0-9])[0-9]{6}(?![0-9])";
 		Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 		Matcher matcher = pattern.matcher(input);
 		boolean found = matcher.find();
